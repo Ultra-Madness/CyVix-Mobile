@@ -11,7 +11,11 @@ import {
 import { useNavigation, NavigationProp } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/types";
 
-const Header = React.memo(({ profileImage }) => {
+type HeaderProps = {
+  profileImage?: any;
+};
+
+const Header = React.memo(({ profileImage }: HeaderProps) => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const canGoBack = navigation.canGoBack();
 
@@ -41,7 +45,7 @@ const Header = React.memo(({ profileImage }) => {
           onPress={() => navigation.navigate("Profile")}
           style={styles.profileContainer}
         >
-          <Image source={profileImage} style={styles.profileIcon} />
+          <Image source={profileImage ?? require("../../assets/images/Profile/default-profile.png")} style={styles.profileIcon} />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
