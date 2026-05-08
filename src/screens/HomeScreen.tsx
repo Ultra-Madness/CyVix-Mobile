@@ -1,8 +1,8 @@
 import React from "react";
-import InvestmentPracticeScreen from "./InvestmentPracticeScreen";
+import PetCompanionScreen from "./PetCompanionScreen";
 
 const HomeScreen = () => {
-  return <InvestmentPracticeScreen />;
+  return <PetCompanionScreen />;
 };
 
 export default HomeScreen;
