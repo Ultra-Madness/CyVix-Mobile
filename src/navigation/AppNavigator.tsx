@@ -12,10 +12,11 @@ const Stack = createStackNavigator();
 const AppNavigator = () => {
   return (
     <Stack.Navigator
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false, // We are handling headers inside screens
         ...TransitionPresets.DefaultTransition,
-        cardStyle: { backgroundColor: "#000" }, // Prevents white flashes
+        cardStyle: { backgroundColor: "#fff" },
       }}
     >
       <Stack.Screen name="Splash" component={SplashScreen} />
